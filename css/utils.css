@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* ---------------------------------------------------display */
+
+.d-none{
+    display: none;
+}
+
+.d-inline-b{
+    display: inline-block;
+}
+
+/* ---------------------------------------------------margin */
+
+.mt-px-1{
+    margin-top: 12px;
+}
+
+.mt-px-2{
+    margin-top: 24px;
+}
+
+.mt-px-4{
+    margin-top: 48px;
+}

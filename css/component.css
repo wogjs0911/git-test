@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* mobile, tablet, pc 로 나눠야 함 */
+
+.header{
+    display: flex;
+    height: 55px;
+    min-width: 260px;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+    
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    .header>div:nth-child(3){
+        width: 248px;
+
+        /* margin-left: 12px; */
+        flex-grow: 1;
+
+        text-align: center;
+    }
+
+/* .hour span{
+    text-align: center;
+} */
+
+    .hour-ctt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .hour-ctt>div:nth-child(1){
+            margin-top: 16px;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+.hour-info{
+    display: grid;
+    grid-template: 
+    "top top" 100px
+    "bottom-left bottom-right" 100px
+    / 1fr 1fr;
+
+    align-items: center;
+}
+
+    .hour-info div{
+        text-align: center;
+
+    }
+    .hour-info>div:nth-child(1){
+        grid-area: top;
+    }
+        .hour-info>div:nth-child(1)>span:nth-child(1){
+            font-size: 60px;
+        }
+
+    .hour-info>div:nth-child(2){
+        grid-area: bottom-left;
+    }
+    .hour-info>div:nth-child(3){
+        grid-area: bottom-right;
+    }
+
+.hour+div{
+    height: 8px;
+}
+
+.lecture-section{
+    padding: 0 16px;
+}
+
+    .lecture-section>ul>li{
+
+        display: flex;
+        align-items: center;
+
+        min-width: 300px;
+        max-height: 80px;
+
+        margin-top: 12px;
+        padding: 16px;
+
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+        .lecture-section>ul>li>img{
+            min-width: 48px;
+            height: 48px;
+
+            border-radius: 100px;
+            border: 1px solid #cdcdcd;
+            overflow: hidden;
+
+            text-indent: -999px;
+        }
+        
+        .lecture-section>ul>li>span{
+            margin-left: 12px;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            /* white-space: nowrap; */
+
+            word-break: break-word;
+    
+            /* warning!! webkit 속성을 지원하지 않는 브라우저는 동작 안됨 */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical
+
+        }
